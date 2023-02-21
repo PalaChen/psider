@@ -28,7 +28,7 @@ def spider(url: str):
 def main():
     for i in range(1, 96):
         url = urljoin("https://3yya.com/lesson/", str(i))
-        print(url)
+        spider(url)
 
 
 if __name__ == '__main__':
