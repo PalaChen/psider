@@ -14,10 +14,11 @@ def parser(content: str) -> dict:
     return {"title": title, "content": str(div)}
 
 
-def spider(url: str):
+def spider(nid:int):
+    url = urljoin("https://3yya.com/lesson/", str(nid))
     response = requests.get(url, headers=headers)
     status_code = response.status_code
-    print(f"status_code:{status_code}")
+    print(f"nid:{nid} status_code:{status_code}")
     if status_code == 404:
         return
 
@@ -27,8 +28,7 @@ def spider(url: str):
 
 def main():
     for i in range(1, 96):
-        url = urljoin("https://3yya.com/lesson/", str(i))
-        spider(url)
+        spider(i)
 
 
 if __name__ == '__main__':
