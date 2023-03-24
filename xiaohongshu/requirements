@@ -1,0 +1,7 @@
+peewee
+requests
+lxml
+beautifulsoup4
+latest-user-agents
+loguru
+playwright
